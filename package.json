@@ -1,6 +1,6 @@
 {
   "name": "fursat-kitchen-bar",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
@@ -9,19 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.15",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "three": "0.160.0",
-    "@types/three": "0.160.0",
-    "@react-three/fiber": "8.16.0",
-    "@react-three/drei": "9.102.0",
-    "gsap": "^3.12.5",
-    "lenis": "^1.1.14",
-    "framer-motion": "^11.0.0",
-    "lucide-react": "^0.453.0",
     "canvas-confetti": "^1.9.3",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.453.0",
+    "next": "14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
