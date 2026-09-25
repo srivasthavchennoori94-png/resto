@@ -25,36 +25,10 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isReservationModalOpen, setIsReservationModalOpen] = useState(false);
 
-  // Initialize Lenis smooth scroll on mount if available
+  // Scroll behavior is handled via smooth native CSS in globals.css
   useEffect(() => {
-    let lenisInstance: any = null;
-    const initLenis = async () => {
-      try {
-        const Lenis = (await import("lenis")).default;
-        lenisInstance = new Lenis({
-          duration: 1.2,
-          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-          orientation: "vertical",
-          smoothWheel: true,
-        });
-
-        const raf = (time: number) => {
-          lenisInstance.raf(time);
-          requestAnimationFrame(raf);
-        };
-        requestAnimationFrame(raf);
-      } catch {
-        // Fallback to native smooth scroll
-      }
-    };
-
-    initLenis();
-
-    return () => {
-      if (lenisInstance) {
-        lenisInstance.destroy();
-      }
-    };
+    // Scroll restoration and smooth setup
+    window.scrollTo(0, 0);
   }, []);
 
   return (
