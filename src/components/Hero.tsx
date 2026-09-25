@@ -4,15 +4,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { ChevronDown, Sparkles, Compass, Calendar, MapPin, Utensils, GlassWater } from "lucide-react";
 
-// Dynamic import of 3D Canvas
-const Hero3DCanvas = dynamic(() => import("./Hero3DCanvas"), {
-  ssr: false,
-  loading: () => (
-    <div className="absolute inset-0 flex items-center justify-center bg-fursat-black/40">
-      <div className="w-12 h-12 rounded-full border-2 border-fursat-gold/30 border-t-fursat-amber animate-spin" />
-    </div>
-  ),
-});
+import Hero3DCanvas from "./Hero3DCanvas";
 
 interface HeroProps {
   onOpenReservation: () => void;
